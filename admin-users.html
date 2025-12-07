@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Admin · Users</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item">
+          <a href="index.html">
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="library.html">
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="admin-users.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Admin · Users</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="admin-sections.html">
+            <div class="sidebar-nav-label">Admin · Sections</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Admin area · Draft
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Admin · Users & Roles</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Admin</div>
+          <span>System Admin</span>
+          <div class="topbar-avatar">SA</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">Users & Roles</div>
+            <div class="page-heading-subtitle">
+              Manage accounts, roles and assignments (static layout).
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-primary">Add user</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">All users</div>
+              <div class="card-subtitle">Example data only.</div>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Active</th>
+                <th>Last login</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>L. Tortladze</td>
+                <td>lasha</td>
+                <td>Chairman</td>
+                <td>Yes</td>
+                <td>05 Dec 2025 · 16:10</td>
+                <td style="text-align:right;">
+                  <button class="btn btn-outline btn-sm">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>System Admin</td>
+                <td>admin</td>
+                <td>Admin</td>
+                <td>Yes</td>
+                <td>05 Dec 2025 · 11:00</td>
+                <td style="text-align:right;">
+                  <button class="btn btn-outline btn-sm">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>N. Tourism</td>
+                <td>nino.t</td>
+                <td>Collaborator</td>
+                <td>Yes</td>
+                <td>05 Dec 2025 · 15:45</td>
+                <td style="text-align:right;">
+                  <button class="btn btn-outline btn-sm">Edit</button>
+                  <button class="btn btn-outline btn-sm">Assignments</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
