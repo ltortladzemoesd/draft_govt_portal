@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Admin · Sections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item">
+          <a href="index.html">
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="library.html">
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="admin-users.html">
+            <div class="sidebar-nav-label">Admin · Users</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="admin-sections.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Admin · Sections</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Sections config · Draft
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Admin · Sections</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Admin</div>
+          <span>System Admin</span>
+          <div class="topbar-avatar">SA</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">Sections</div>
+            <div class="page-heading-subtitle">
+              Global sections and per-country inclusion (static layout).
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid--two-balanced">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Global sections template</div>
+                <div class="card-subtitle">Order and labels for all sections.</div>
+              </div>
+              <button class="btn btn-primary btn-sm">Add section</button>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Key</th>
+                  <th>Label</th>
+                  <th>Active</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>international_relations</td>
+                  <td>International Relations</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>economic_relations</td>
+                  <td>Economic Relations</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>tourism</td>
+                  <td>Tourism</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>energy</td>
+                  <td>Energy</td>
+                  <td>Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Country-specific sections</div>
+                <div class="card-subtitle">Choose which sections are required per country.</div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="sections-country">Country</label>
+              <select id="sections-country" class="field-select">
+                <option>Serbia</option>
+                <option>Turkey</option>
+                <option>Germany</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Sections included in requested file</span>
+              <div style="font-size:13px; display:flex; flex-direction:column; gap:4px;">
+                <label><input type="checkbox" checked /> International Relations</label>
+                <label><input type="checkbox" checked /> Economic Relations</label>
+                <label><input type="checkbox" checked /> Tourism</label>
+                <label><input type="checkbox" /> Innovation</label>
+              </div>
+            </div>
+
+            <div class="card-actions" style="justify-content:flex-end;">
+              <button class="btn btn-primary">Save (static)</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
