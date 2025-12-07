@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Supervisor Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="dashboard-supervisor.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="library.html">
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="statistics.html">
+            <div class="sidebar-nav-label">Statistics</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Supervisor view · Draft UI
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Supervisor Dashboard</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Supervisor</div>
+          <span>G. Energy</span>
+          <div class="topbar-avatar">GE</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">Country review</div>
+            <div class="page-heading-subtitle">
+              Review submitted sections, return with comments or approve.
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid--two-balanced">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Country</div>
+                <div class="card-subtitle">Choose which country to review.</div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="country-select">Country</label>
+              <select id="country-select" class="field-select">
+                <option>Serbia</option>
+                <option>Turkey</option>
+                <option>Germany</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Summary</span>
+              <span style="font-size:13px;">6 / 9 sections approved · 2 pending · 1 returned</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn btn-outline">Preview full TPs</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Upcoming deadlines</div>
+                <div class="card-subtitle">Tasks your team must complete.</div>
+              </div>
+            </div>
+            <ul style="list-style:none; font-size:13px; display:flex; flex-direction:column; gap:6px;">
+              <li>
+                <strong>Serbia · 20 Dec 2025</strong><br/>
+                <span style="font-size:12px;">Sections: Tourism, Energy</span><br/>
+                <span class="status-pill status-pill--pending" style="margin-top:2px;">Under review</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Sections for Serbia</div>
+              <div class="card-subtitle">Open sections in editor to review or adjust text.</div>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Section</th>
+                <th>Status</th>
+                <th>Last updated</th>
+                <th>Collaborator</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>International Relations</td>
+                <td><span class="status-pill status-pill--pending">Submitted</span></td>
+                <td>05 Dec · 16:20</td>
+                <td>Nino</td>
+                <td style="text-align:right;">
+                  <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Tourism</td>
+                <td><span class="status-pill status-pill--returned">Returned</span></td>
+                <td>05 Dec · 13:42</td>
+                <td>Nino</td>
+                <td style="text-align:right;">
+                  <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Energy</td>
+                <td><span class="status-pill status-pill--approved">Approved</span></td>
+                <td>04 Dec · 11:10</td>
+                <td>Giorgi</td>
+                <td style="text-align:right;">
+                  <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
