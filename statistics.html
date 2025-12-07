@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Statistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item">
+          <a href="index.html">
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="library.html">
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="statistics.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Statistics</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Statistics view · Draft
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Statistics</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Viewer</div>
+          <span>Observer</span>
+          <div class="topbar-avatar">OB</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">Portal statistics</div>
+            <div class="page-heading-subtitle">
+              High-level indicators (all numbers are sample data).
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-row">
+          <div class="card">
+            <div class="card-title">Countries</div>
+            <div class="stat-card-number">12</div>
+            <div class="stat-card-label">Countries configured in the portal</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Sections approved</div>
+            <div class="stat-card-number">68</div>
+            <div class="stat-card-label">Out of 108 total sections</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Documents in Library</div>
+            <div class="stat-card-number">7</div>
+            <div class="stat-card-label">Chairman-approved TPs</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Active deadlines</div>
+            <div class="stat-card-number">5</div>
+            <div class="stat-card-label">Within the next 30 days</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Country readiness (sample)</div>
+              <div class="card-subtitle">How many sections are approved per country.</div>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Approved</th>
+                <th>Pending</th>
+                <th>Returned</th>
+                <th>Total sections</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Serbia</td>
+                <td>7</td>
+                <td>1</td>
+                <td>1</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>Turkey</td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>Germany</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>9</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
