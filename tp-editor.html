@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Section Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item">
+          <a href="dashboard-collaborator.html">
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="library.html">
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Shared editor layout · Draft
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Section editor – Tourism · Serbia</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Collaborator</div>
+          <span>N. Tourism</span>
+          <div class="topbar-avatar">NT</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Tourism · Serbia</div>
+              <div class="card-subtitle">Talking Points for upcoming JEC deadline.</div>
+            </div>
+            <div class="deadline-pill">
+              Deadline: 20 Dec 2025
+            </div>
+          </div>
+
+          <div class="status-bar">
+            <div class="status-bar-steps">
+              <div class="status-step">
+                <div class="status-dot"></div><span>Draft</span>
+              </div>
+              <div class="status-step status-step--attention">
+                <div class="status-dot"></div><span>Returned</span>
+              </div>
+              <div class="status-step">
+                <div class="status-dot"></div><span>Approved</span>
+              </div>
+            </div>
+            <div>
+              <span class="status-pill status-pill--returned">Returned with comments</span>
+            </div>
+          </div>
+
+          <div style="font-size: 12px; padding: 6px 8px; border-radius: 4px; background: rgba(226, 127, 136, 0.06); border: 1px solid rgba(226, 127, 136, 0.3); margin-bottom: 8px;">
+            Supervisor comment (example): Please add updated visitor numbers for Q3 2025 and shorten the first paragraph.
+          </div>
+
+          <div class="editor-placeholder">
+            <div class="editor-toolbar-placeholder">
+              CKEditor toolbar (bold, bullets, headings…) – static placeholder.
+            </div>
+            <div class="editor-body-placeholder">
+              <p><strong>Key messages on tourism cooperation</strong></p>
+              <p>• Thank Serbia for increasing tourist flows and highlight visa-free regime.</p>
+              <p>• Mention growth in Q3 2025 and opportunities for joint promotion.</p>
+              <p style="opacity:0.6;">(In real app this will be CKEditor content.)</p>
+            </div>
+          </div>
+
+          <div class="card-actions" style="justify-content:flex-end; margin-top:10px;">
+            <button class="btn btn-outline">Save draft</button>
+            <button class="btn btn-primary">Submit for review</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
