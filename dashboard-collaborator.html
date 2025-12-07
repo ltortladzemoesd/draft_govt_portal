@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Collaborator Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="dashboard-collaborator.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="statistics.html">
+            <div class="sidebar-nav-label">Statistics</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Collaborator view · Draft UI
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Collaborator Dashboard</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Collaborator</div>
+          <span>N. Tourism</span>
+          <div class="topbar-avatar">NT</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">My tasks</div>
+            <div class="page-heading-subtitle">
+              Deadlines and Talking Points you are responsible for.
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid--two-balanced">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Upcoming deadlines</div>
+                <div class="card-subtitle">Country/sections assigned to you</div>
+              </div>
+            </div>
+            <ul style="list-style:none; font-size:13px; display:flex; flex-direction:column; gap:6px;">
+              <li>
+                <strong>Serbia</strong> · Deadline: 20 Dec 2025<br/>
+                <span style="font-size:12px;">Sections: Tourism, Economic Relations</span><br/>
+                <span class="status-pill status-pill--pending" style="margin-top:2px;">In progress</span>
+              </li>
+              <li>
+                <strong>Turkey</strong> · Deadline: 11 Jan 2026<br/>
+                <span style="font-size:12px;">Sections: Tourism</span><br/>
+                <span class="status-pill status-pill--pending" style="margin-top:2px;">Not started</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Work on Talking Points</div>
+                <div class="card-subtitle">Choose a country and section to edit.</div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="country-select">Country</label>
+              <select id="country-select" class="field-select">
+                <option>Serbia</option>
+                <option>Turkey</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Sections assigned to you</span>
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Status</th>
+                  <th style="text-align:right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tourism</td>
+                  <td><span class="status-pill status-pill--returned">Returned</span></td>
+                  <td style="text-align:right;">
+                    <a href="tp-editor.html" class="btn btn-outline btn-sm">Edit</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Economic Relations</td>
+                  <td><span class="status-pill status-pill--pending">In draft</span></td>
+                  <td style="text-align:right;">
+                    <a href="tp-editor.html" class="btn btn-outline btn-sm">Edit</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
