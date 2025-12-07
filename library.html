@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item">
+          <a href="index.html">
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="calendar.html">
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="library.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="statistics.html">
+            <div class="sidebar-nav-label">Statistics</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Library of approved TPs
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Library</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Chairman</div>
+          <span>L. Tortladze</span>
+          <div class="topbar-avatar">LT</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">Approved Talking Points</div>
+            <div class="page-heading-subtitle">
+              Browse final documents approved for use in meetings.
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Select country</div>
+              <div class="card-subtitle">Only Chairman-approved files appear here.</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="library-country">Country</label>
+            <select id="library-country" class="field-select">
+              <option>Serbia</option>
+              <option>Turkey</option>
+              <option>Germany</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <span class="field-label">Last edited</span>
+            <span style="font-size:13px;">05 Dec 2025 · 17:20</span>
+          </div>
+
+          <div class="field">
+            <span class="field-label">Approved by</span>
+            <span style="font-size:13px;">Chairman – L. Tortladze</span>
+          </div>
+
+          <div class="card-actions" style="margin-top:8px;">
+            <button class="btn btn-outline">Preview full TPs</button>
+            <button class="btn btn-primary">Download PDF</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
