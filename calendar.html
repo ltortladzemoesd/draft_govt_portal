@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GOV COLLAB PORTAL – Calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          GOV COLLAB PORTAL
+          <span>Talking Points Coordination</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item">
+          <a href="index.html">
+            <div class="sidebar-nav-label">Dashboard</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item sidebar-nav-item--active">
+          <a href="calendar.html">
+            <div class="sidebar-nav-indicator"></div>
+            <div class="sidebar-nav-label">Calendar</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="library.html">
+            <div class="sidebar-nav-label">Library</div>
+          </a>
+        </div>
+        <div class="sidebar-nav-item">
+          <a href="statistics.html">
+            <div class="sidebar-nav-label">Statistics</div>
+          </a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        Calendar · Deadlines only
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">Calendar</div>
+        <div class="topbar-user">
+          <div class="topbar-role-pill">Protocol</div>
+          <span>Protocol User</span>
+          <div class="topbar-avatar">PR</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="page-heading">
+          <div>
+            <div class="page-heading-title">Deadlines</div>
+            <div class="page-heading-subtitle">
+              All Talking Points deadlines by country.
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid--two">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">December 2025</div>
+                <div class="card-subtitle">Illustrative static calendar grid</div>
+              </div>
+            </div>
+            <div class="mini-calendar">
+              <div class="mini-calendar-header">M</div>
+              <div class="mini-calendar-header">T</div>
+              <div class="mini-calendar-header">W</div>
+              <div class="mini-calendar-header">T</div>
+              <div class="mini-calendar-header">F</div>
+              <div class="mini-calendar-header">S</div>
+              <div class="mini-calendar-header">S</div>
+
+              <div class="mini-calendar-day"></div>
+              <div class="mini-calendar-day"></div>
+              <div class="mini-calendar-day">1</div>
+              <div class="mini-calendar-day">2</div>
+              <div class="mini-calendar-day mini-calendar-day--has-event">3</div>
+              <div class="mini-calendar-day">4</div>
+              <div class="mini-calendar-day">5</div>
+
+              <div class="mini-calendar-day">6</div>
+              <div class="mini-calendar-day mini-calendar-day--deadline-soon">7</div>
+              <div class="mini-calendar-day">8</div>
+              <div class="mini-calendar-day">9</div>
+              <div class="mini-calendar-day mini-calendar-day--has-event">10</div>
+              <div class="mini-calendar-day">11</div>
+              <div class="mini-calendar-day">12</div>
+            </div>
+
+            <div style="margin-top: 10px; font-size: 12px;">
+              <strong>Upcoming deadlines</strong>
+            </div>
+            <ul style="list-style:none; margin-top:4px; font-size:12px; display:flex; flex-direction:column; gap:4px;">
+              <li>
+                <strong>20 Dec 2025</strong> · Serbia – JEC TPs<br/>
+                <span style="font-size:11px;">Sections: Tourism, Economic Relations, Energy</span>
+              </li>
+              <li>
+                <strong>11 Jan 2026</strong> · Turkey – Energy meeting TPs<br/>
+                <span style="font-size:11px;">Sections: Energy</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Event creation panel for Protocol/Admin/Supervisor/Chairman -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Create new deadline</div>
+                <div class="card-subtitle">Static form – no functionality yet.</div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="event-country">Country</label>
+              <select id="event-country" class="field-select">
+                <option>Serbia</option>
+                <option>Turkey</option>
+                <option>Germany</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="event-date">Deadline date</label>
+              <input type="date" id="event-date" class="field-input" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="event-title">Title</label>
+              <input type="text" id="event-title" class="field-input" placeholder="Deadline for Serbia JEC TPs" />
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="event-occasion">Related meeting / occasion</label>
+              <input type="text" id="event-occasion" class="field-input" placeholder="Georgia–Serbia JEC" />
+            </div>
+
+            <div class="field">
+              <label class="field-label">Sections required for this task</label>
+              <div style="font-size:12px; margin-bottom:4px; opacity:0.8;">All checked by default – untick to exclude.</div>
+              <div style="font-size:13px; display:flex; flex-direction:column; gap:4px;">
+                <label><input type="checkbox" checked /> International Relations</label>
+                <label><input type="checkbox" checked /> Economic Relations</label>
+                <label><input type="checkbox" checked /> Tourism</label>
+                <label><input type="checkbox" checked /> Energy</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="event-notes">Notes / instructions</label>
+              <textarea id="event-notes" class="field-textarea" placeholder="Example: Please include latest Q3 2025 figures and highlight priority projects."></textarea>
+            </div>
+
+            <div class="card-actions" style="justify-content:flex-end;">
+              <button class="btn btn-primary">Save deadline (static)</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
