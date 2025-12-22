@@ -50,71 +50,132 @@
         <div class="topbar-title">Supervisor Dashboard</div>
         <div class="topbar-user">
           <div class="topbar-role-pill">Supervisor</div>
-          <span>G. Energy</span>
-          <div class="topbar-avatar">GE</div>
+          <span>Givi Zedelashvili</span>
+          <div class="topbar-avatar">GZ</div>
         </div>
       </header>
 
       <main class="content">
         <section class="page-heading">
           <div>
-            <div class="page-heading-title">Country review</div>
+            <div class="page-heading-title">Overview</div>
             <div class="page-heading-subtitle">
-              Review submitted sections, return with comments or approve.
+              Review submitted sections, return with comments or submit full document to Chairman.
             </div>
           </div>
         </section>
 
-        <section class="grid grid--two-balanced">
-          <div class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Country</div>
-                <div class="card-subtitle">Choose which country to review.</div>
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="field-label" for="country-select">Country</label>
-              <select id="country-select" class="field-select">
-                <option>Serbia</option>
-                <option>Turkey</option>
-                <option>Germany</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <span class="field-label">Summary</span>
-              <span style="font-size:13px;">6 / 9 sections approved · 2 pending · 1 returned</span>
-            </div>
-
-            <div class="card-actions">
-              <button class="btn btn-outline">Preview full TPs</button>
-            </div>
-          </div>
-
+        <!-- FIRST ROW: CALENDAR + COUNTRY SELECTION (same style as Chairman) -->
+        <section class="grid grid--two">
+          <!-- Calendar card -->
           <div class="card">
             <div class="card-header">
               <div>
                 <div class="card-title">Upcoming deadlines</div>
-                <div class="card-subtitle">Tasks your team must complete.</div>
+                <div class="card-subtitle">Next 30 days (sample data).</div>
               </div>
             </div>
-            <ul style="list-style:none; font-size:13px; display:flex; flex-direction:column; gap:6px;">
+
+            <div class="mini-calendar">
+              <div class="mini-calendar-header">M</div>
+              <div class="mini-calendar-header">T</div>
+              <div class="mini-calendar-header">W</div>
+              <div class="mini-calendar-header">T</div>
+              <div class="mini-calendar-header">F</div>
+              <div class="mini-calendar-header">S</div>
+              <div class="mini-calendar-header">S</div>
+
+              <div class="mini-calendar-day"></div>
+              <div class="mini-calendar-day">1</div>
+              <div class="mini-calendar-day">2</div>
+              <div class="mini-calendar-day mini-calendar-day--has-event">3</div>
+              <div class="mini-calendar-day">4</div>
+              <div class="mini-calendar-day">5</div>
+              <div class="mini-calendar-day">6</div>
+
+              <div class="mini-calendar-day">7</div>
+              <div class="mini-calendar-day mini-calendar-day--deadline-soon">8</div>
+              <div class="mini-calendar-day">9</div>
+              <div class="mini-calendar-day">10</div>
+              <div class="mini-calendar-day mini-calendar-day--has-event">11</div>
+              <div class="mini-calendar-day">12</div>
+              <div class="mini-calendar-day">13</div>
+            </div>
+
+            <div style="margin-top: 10px; font-size: 12px;">
+              <strong>Nearest deadlines</strong>
+            </div>
+            <ul style="list-style: none; margin-top: 4px; font-size: 12px; display: flex; flex-direction: column; gap: 4px;">
               <li>
-                <strong>Serbia · 20 Dec 2025</strong><br/>
-                <span style="font-size:12px;">Sections: Tourism, Energy</span><br/>
-                <span class="status-pill status-pill--pending" style="margin-top:2px;">Under review</span>
+                <span>20 Dec · </span>
+                <strong>Serbia</strong>
+                <span> – JEC TPs</span>
+                <span class="status-pill status-pill--pending" style="margin-left: 4px;">Under Supervisor review</span>
+              </li>
+              <li>
+                <span>11 Jan · </span>
+                <strong>Turkey</strong>
+                <span> – Energy meeting</span>
+                <span class="status-pill status-pill--pending" style="margin-left: 4px;">In progress</span>
               </li>
             </ul>
           </div>
+
+          <!-- Country Talking Points + submit document -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Country Talking Points</div>
+                <div class="card-subtitle">
+                  Select a country to review sections and submit full document to Chairman.
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="country">Country</label>
+              <select id="country" class="field-select">
+                <option>Serbia</option>
+                <option>Turkey</option>
+                <option>Germany</option>
+              </select>
+              <div class="field-hint">Static placeholder for now.</div>
+            </div>
+
+            <div class="field" style="margin-top: 4px;">
+              <span class="field-label">Document status</span>
+              <span class="status-pill status-pill--pending">Under Supervisor review</span>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Last edited</span>
+              <span style="font-size: 13px;">05 Dec 2025 · 17:20</span>
+            </div>
+
+            <div class="card-actions" style="margin-top: 6px;">
+              <button class="btn btn-outline">Preview full TPs</button>
+              <button class="btn btn-success">Submit entire document to Chairman</button>
+              <button class="btn btn-danger">Return document with comment</button>
+            </div>
+
+            <div class="field" style="margin-top: 10px;">
+              <label class="field-label" for="sup-comment">Return comment (example state)</label>
+              <textarea id="sup-comment" class="field-textarea" placeholder="Example: Please update trade figures and clarify tourism section conclusion."></textarea>
+            </div>
+          </div>
         </section>
 
+        <!-- SECOND ROW: SECTION TABLE (per-country view) -->
         <section class="card">
           <div class="card-header">
             <div>
               <div class="card-title">Sections for Serbia</div>
-              <div class="card-subtitle">Open sections in editor to review or adjust text.</div>
+              <div class="card-subtitle">
+                Open sections in editor to review or adjust text before submitting full document.
+              </div>
+            </div>
+            <div>
+              <span class="status-pill status-pill--approved">6 / 9 sections approved</span>
             </div>
           </div>
 
@@ -131,9 +192,18 @@
             <tbody>
               <tr>
                 <td>International Relations</td>
-                <td><span class="status-pill status-pill--pending">Submitted</span></td>
-                <td>05 Dec · 16:20</td>
-                <td>Nino</td>
+                <td><span class="status-pill status-pill--approved">Approved</span></td>
+                <td>04 Dec 2025 · 11:10</td>
+                <td>Mariam M.</td>
+                <td style="text-align:right;">
+                  <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Economic Relations & Trade</td>
+                <td><span class="status-pill status-pill--pending">Received</span></td>
+                <td>05 Dec 2025 · 15:05</td>
+                <td>Diana M.</td>
                 <td style="text-align:right;">
                   <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
                 </td>
@@ -141,8 +211,8 @@
               <tr>
                 <td>Tourism</td>
                 <td><span class="status-pill status-pill--returned">Returned</span></td>
-                <td>05 Dec · 13:42</td>
-                <td>Nino</td>
+                <td>05 Dec 2025 · 13:42</td>
+                <td>Vakhtang K.</td>
                 <td style="text-align:right;">
                   <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
                 </td>
@@ -150,8 +220,8 @@
               <tr>
                 <td>Energy</td>
                 <td><span class="status-pill status-pill--approved">Approved</span></td>
-                <td>04 Dec · 11:10</td>
-                <td>Giorgi</td>
+                <td>04 Dec 2025 · 10:20</td>
+                <td>Ana G.</td>
                 <td style="text-align:right;">
                   <a href="tp-editor.html" class="btn btn-outline btn-sm">Open section</a>
                 </td>
@@ -164,3 +234,4 @@
   </div>
 </body>
 </html>
+
