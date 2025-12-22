@@ -55,8 +55,8 @@
         <div class="topbar-title">Admin · Users & Roles</div>
         <div class="topbar-user">
           <div class="topbar-role-pill">Admin</div>
-          <span>System Admin</span>
-          <div class="topbar-avatar">SA</div>
+          <span>L. Tortladze</span>
+          <div class="topbar-avatar">LT</div>
         </div>
       </header>
 
@@ -65,7 +65,7 @@
           <div>
             <div class="page-heading-title">Users & Roles</div>
             <div class="page-heading-subtitle">
-              Manage accounts, roles and assignments (static layout).
+              Manage accounts, roles, emails and section assignments (static layout).
             </div>
           </div>
           <div>
@@ -73,6 +73,7 @@
           </div>
         </section>
 
+        <!-- USERS TABLE -->
         <section class="card">
           <div class="card-header">
             <div>
@@ -85,6 +86,7 @@
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Email</th>
                 <th>Username</th>
                 <th>Role</th>
                 <th>Active</th>
@@ -95,8 +97,9 @@
             <tbody>
               <tr>
                 <td>L. Tortladze</td>
+                <td>ltortladze@moesd.gov.ge</td>
                 <td>lasha</td>
-                <td>Chairman</td>
+                <td>Admin</td>
                 <td>Yes</td>
                 <td>05 Dec 2025 · 16:10</td>
                 <td style="text-align:right;">
@@ -104,17 +107,30 @@
                 </td>
               </tr>
               <tr>
-                <td>System Admin</td>
-                <td>admin</td>
-                <td>Admin</td>
+                <td>Genadi Arveladze</td>
+                <td>garveladze@moesd.gov.ge</td>
+                <td>g.arveladze</td>
+                <td>Chairman</td>
                 <td>Yes</td>
-                <td>05 Dec 2025 · 11:00</td>
+                <td>05 Dec 2025 · 14:30</td>
+                <td style="text-align:right;">
+                  <button class="btn btn-outline btn-sm">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Givi Zedelashvili</td>
+                <td>gzedelashvili@moesd.gov.ge</td>
+                <td>g.zedelashvili</td>
+                <td>Supervisor</td>
+                <td>Yes</td>
+                <td>05 Dec 2025 · 12:05</td>
                 <td style="text-align:right;">
                   <button class="btn btn-outline btn-sm">Edit</button>
                 </td>
               </tr>
               <tr>
                 <td>N. Tourism</td>
+                <td>n.tourism@moesd.gov.ge</td>
                 <td>nino.t</td>
                 <td>Collaborator</td>
                 <td>Yes</td>
@@ -126,6 +142,62 @@
               </tr>
             </tbody>
           </table>
+        </section>
+
+        <!-- ASSIGN SECTIONS TO COLLABORATOR -->
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Assign sections to collaborator</div>
+              <div class="card-subtitle">
+                Example layout for assigning countries & sections (no logic yet).
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid--two-balanced">
+            <div>
+              <div class="field">
+                <label class="field-label" for="assign-user">Collaborator</label>
+                <select id="assign-user" class="field-select">
+                  <option>N. Tourism · n.tourism@moesd.gov.ge</option>
+                  <option>Mariam Managadze · mmanagadze@moesd.gov.ge</option>
+                  <option>Eka Kubusidze · ekubusidze@moesd.gov.ge</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="assign-country">Country</label>
+                <select id="assign-country" class="field-select">
+                  <option>Serbia</option>
+                  <option>Turkey</option>
+                  <option>Germany</option>
+                </select>
+              </div>
+
+              <div class="field-hint">
+                In the real system, this will be filtered to collaborators only.
+              </div>
+            </div>
+
+            <div>
+              <div class="field">
+                <span class="field-label">Sections for this collaborator</span>
+                <div style="font-size:13px; display:flex; flex-direction:column; gap:4px;">
+                  <label><input type="checkbox" checked /> Introduction</label>
+                  <label><input type="checkbox" checked /> Economic Relations & Trade</label>
+                  <label><input type="checkbox" /> Transport</label>
+                  <label><input type="checkbox" checked /> Tourism</label>
+                  <label><input type="checkbox" /> Energy</label>
+                  <label><input type="checkbox" /> Communications, Innovation and Post</label>
+                </div>
+              </div>
+
+              <div class="card-actions" style="justify-content:flex-end;">
+                <button class="btn btn-primary">Save assignments (static)</button>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
